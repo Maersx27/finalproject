@@ -1,3 +1,4 @@
+import 'package:finalpro/view/login_page.dart';
 import 'package:finalpro/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
+      initialRoute: SplashScreen.route,
+      routes: {
+        SplashScreen.route: (context) => SplashScreen(),
+        LoginPage.route: (context) => LoginPage()
+      },
     );
   }
 }

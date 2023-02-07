@@ -8,7 +8,7 @@
             "name": "finalpro",
             "request": "launch",
             "type": "dart",
-            "deviceId": "2b146a64"
+           
         },
         {
             "name": "finalpro (profile mode)",
