@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:finalpro/view/login_page.dart';
 import 'package:flutter/material.dart';
-
 import '../constants/r.dart';
 
 class SplashScreen extends StatelessWidget {

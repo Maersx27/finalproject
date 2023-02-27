@@ -1,6 +1,6 @@
 class Assets {
   String icSplash = "assets/auth/ic_splash.png";
-  String ic_apple = "assets/auth/ic_apple.png";
+  String icApple = "assets/auth/ic_apple.png";
   String icGoogle = "assets/auth/ic_google.png";
   String imgLogin = "assets/auth/img_login.png";
 
