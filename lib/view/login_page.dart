@@ -1,6 +1,7 @@
 import 'package:finalpro/constants/R/assets.dart';
 import 'package:finalpro/view/registration_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/r.dart';
 
@@ -16,9 +17,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: R.colors.grey,
+      backgroundColor: Color(0xffF0F3F5),
       body: Padding(
-        padding: const EdgeInsets.all(32.0),
+        padding: const EdgeInsets.all(25.0),
         child: Column(
           children: [
             Align(
@@ -44,8 +45,7 @@ class _LoginPageState extends State<LoginPage> {
             Text(
               R.strings.loginDesciprion,
               textAlign: TextAlign.center,
-              // textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.poppins().copyWith(
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
                 color: R.colors.greySubtitle,
