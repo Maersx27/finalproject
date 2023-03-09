@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.finalpro">
-   <application
-        android:label="finalpro"
+<application
+        android:label="Latihan Soal"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

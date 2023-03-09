@@ -23,35 +23,38 @@ class _HomePageState extends State<HomePage> {
             _buildTopBanner(context),
             _buildHomeListMapel(),
             Container(
-              margin: EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        "Terbaru",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                    child: Text(
+                      "Terbaru",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
                       ),
-                      //  Spacer(),
-                    ],
+                    ),
                   ),
+                  SizedBox(height: 10),
                   Container(
-                    height: 170,
+                    height: 150,
                     child: ListView.builder(
                       itemCount: 5,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: ((context, index) {
-                        return Image.asset(
-                          R.assets.imgBanner,
+                        return Padding(
+                          padding: const EdgeInsets.only(left: 20.0),
+                          child: Image.asset(
+                            R.assets.imgBanner,
+                          ),
                         );
                       }),
                     ),
-                  )
+                  ),
+                  SizedBox(height: 35),
                 ],
               ),
             )
@@ -184,13 +187,13 @@ class MapelWidget extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
-      margin: EdgeInsets.only(bottom: 18),
-      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 21),
+      margin: EdgeInsets.only(bottom: 10),
+      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 20),
       child: Row(
         children: [
           Container(
-            height: 53,
-            width: 53,
+            height: 50,
+            width: 50,
             padding: EdgeInsets.all(13),
             decoration: BoxDecoration(
                 color: R.colors.grey, borderRadius: BorderRadius.circular(10)),
