@@ -1,0 +1,9 @@
+> Task :firebase_auth:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Hassan\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 66:17:3E:7D:61:00:F9:37:90:5A:4C:58:9E:DF:15:E2
+SHA1: 9F:BE:F0:A3:62:68:3F:E7:1A:E1:D9:BD:0B:24:11:5F:C1:E6:7A:EB
+SHA-256: 09:C5:37:C2:EC:24:69:90:20:6E:BB:21:32:6E:65:27:A8:EC:BA:6C:11:B1:5B:3C:08:B4:45:B0:DE:20:09:03
+Valid until: Sunday, February 16, 2053
