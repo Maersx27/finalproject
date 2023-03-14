@@ -1,5 +1,9 @@
 import 'package:finalpro/constants/r.dart';
+import 'package:finalpro/view/login_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -147,39 +151,48 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 13),
-            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+          GestureDetector(
+            onTap: () async {
+              await GoogleSignIn().signOut();
+              FirebaseAuth.instance.signOut();
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil(LoginPage.route, (route) => false);
+            },
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 13),
+              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 8),
 
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(blurRadius: 7, color: Colors.black.withOpacity(0.25)),
-              ],
-            ),
-            // child: ListTile(
-            //   title: Text(
-            //     "Keluar",
-            //     style: TextStyle(color: Colors.red),
-            //   ),
-            //   leading: Icon(
-            //     Icons.exit_to_app,
-            //     color: Colors.red,
-            //   ),
-            // ),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.exit_to_app,
-                  color: Colors.red,
-                ),
-                SizedBox(width: 10),
-                Text(
-                  "Keluar",
-                  style: TextStyle(color: Colors.red),
-                ),
-              ],
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 7, color: Colors.black.withOpacity(0.25)),
+                ],
+              ),
+              // child: ListTile(
+              //   title: Text(
+              //     "Keluar",
+              //     style: TextStyle(color: Colors.red),
+              //   ),
+              //   leading: Icon(
+              //     Icons.exit_to_app,
+              //     color: Colors.red,
+              //   ),
+              // ),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.exit_to_app,
+                    color: Colors.red,
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    "Keluar",
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

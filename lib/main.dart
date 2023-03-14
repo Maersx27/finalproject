@@ -1,16 +1,20 @@
 import 'package:finalpro/view/login_page.dart';
 import 'package:finalpro/view/main/latihan_soal/mapel_page.dart';
 import 'package:finalpro/view/main/latihan_soal/paket_soal_page.dart';
-
 import 'package:finalpro/view/main_page.dart';
 import 'package:finalpro/view/registration_page.dart';
 import 'package:finalpro/view/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../constants/r.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      // options: DefaultFirebaseOptions.currentPlatform,
+      );
   runApp(const MyApp());
 }
 
